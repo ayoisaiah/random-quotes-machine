@@ -98,8 +98,10 @@
 
   <script type="text/javascript">
 
+  const endpoint ='https://api.whatdoestrumpthink.com/api/v1/quotes/random';
+
    function getQuote() {
-    fetch('https://api.whatdoestrumpthink.com/api/v1/quotes/random')
+    fetch(endpoint)
       .then(response => response.json())
       .then(data => {
         displayQuote(data.message);
